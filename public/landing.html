@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calorie Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Landing specific layout using the shared orange palette */
+    .landing-wrap { min-height: 100vh; display: grid; place-items: center; padding: 2rem; }
+    .landing-card { 
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px var(--shadow-color);
+      max-width: 920px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .landing-hero {
+      background-image: radial-gradient(1200px 600px at 10% 10%, var(--background-end), transparent),
+                        radial-gradient(800px 400px at 90% 20%, var(--background-start), transparent);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1rem; color: var(--text-color);
+    }
+    .brand-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--primary-color); box-shadow: 0 0 0 6px rgba(234,88,12,0.10); }
+    .title { font-size: 2.4rem; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 0.75rem; }
+    .subtitle { color: var(--subtle-text-color); max-width: 700px; margin: 0 auto 2rem; }
+
+    .cta { display: inline-flex; align-items: center; gap: 10px; }
+    .cta .btn-primary { font-size: 1rem; padding: 14px 28px; border-radius: 999px; }
+    .cta .btn-primary i { width: 20px; height: 20px; }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 0 2rem 2rem; }
+    .feature {
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 16px;
+      background: linear-gradient(180deg, var(--background-start), #fff 40%);
+    }
+    .feature h4 { font-size: 1rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.9rem; color: var(--subtle-text-color); }
+
+    @media (max-width: 640px) {
+      .title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-wrap">
+    <div class="landing-card">
+      <section class="landing-hero">
+        <div class="brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span><strong>Calorie Tracker</strong></span>
+        </div>
+        <h1 class="title">Track meals smarter with AI</h1>
+        <p class="subtitle">Snap, refine, and log meals with precise macros. Start now and keep your goals on track with a clean, orange-themed experience.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="/app" aria-label="Enter App">
+            <span>Enter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </section>
+      <section class="features">
+        <div class="feature">
+          <h4>Quick Image Analysis</h4>
+          <p>Upload a photo to estimate calories and macros fast.</p>
+        </div>
+        <div class="feature">
+          <h4>Refine with Feedback</h4>
+          <p>Adjust items and portions with a simple correction flow.</p>
+        </div>
+        <div class="feature">
+          <h4>Smart Summaries</h4>
+          <p>Visual rings show calories and protein progress at a glance.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

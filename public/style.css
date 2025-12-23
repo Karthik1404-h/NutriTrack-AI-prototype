@@ -1,16 +1,17 @@
 /* 🎨 style.css */
 :root {
-    --primary-color: #0ea5e9; /* Sky Blue */
-    --secondary-color: #10b981; /* Emerald Green */
-    --accent-color: #f97316; /* Orange */
-    --background-start: #f0f9ff;
-    --background-end: #e0f2fe;
+    /* Orange palette */
+    --primary-color: #ea580c; /* Orange 600 */
+    --secondary-color: #f59e0b; /* Amber 500 */
+    --accent-color: #ff7f0f; /* Vibrant Orange */
+    --background-start: #fff7ed; /* Orange 50 */
+    --background-end: #ffedd5;   /* Orange 100 */
     --card-background: #ffffff;
-    --text-color: #0f172a; /* Slate 900 */
-    --subtle-text-color: #64748b; /* Slate 500 */
-    --border-color: #e2e8f0; /* Slate 200 */
-    --shadow-color: rgba(71, 85, 105, 0.07);
-    --shadow-hover-color: rgba(71, 85, 105, 0.15);
+    --text-color: #0f172a; /* Slate 900 for readability */
+    --subtle-text-color: #6b7280; /* Neutral 500 */
+    --border-color: #fed7aa; /* Orange 200 */
+    --shadow-color: rgba(234, 88, 12, 0.10);
+    --shadow-hover-color: rgba(234, 88, 12, 0.20);
     --font-family: 'Poppins', sans-serif;
     --danger-color: #ef4444; /* Red 500 */
 }

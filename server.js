@@ -2,6 +2,7 @@
 
 // Import necessary packages
 const express = require('express');
+const path = require('path');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config(); // To load environment variables from a .env file
 
@@ -10,8 +11,20 @@ const app = express();
 const port = 3000; // The port the server will run on
 
 // --- Middleware ---
-app.use(express.json({ limit: '10mb' })); 
-app.use(express.static('public')); 
+app.use(express.json({ limit: '10mb' }));
+
+// Serve landing page at root
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'landing.html'));
+});
+
+// Serve the main app at /app
+app.get('/app', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Static assets
+app.use(express.static('public'));
 
 // --- Gemini API Setup ---
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
